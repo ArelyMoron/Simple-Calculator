@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculator.js"></script>
+</head>
+<body onload="Start()">
+    <header>
+        <div>
+            <a href="#">Simple Calculator</a>
+        </div>
+    </header>
+    <div class="calc" onkeyup="OnkeyBackspace(event)" onkeypress="OnKeyEnter(event)">
+        <table>
+            <tr>
+                    <td colspan="4"><input type="text" name="" id="txt_calc2" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3"><input type="text" name="" id="txt_calc" readonly></td>
+                <td><input type="button" value="  C  " id="button" onclick="Onclick_delete()" style="border-bottom: 2px solid white;"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="%" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="+/-" id="button" onclick="Onclick_changeSign()"></td>
+                <td><input type="button" value="AC" id="button" onclick="Onclick_deleteAll()"></td>
+                <td><input type="button" value="/" id="button" onclick="Onclick_addNum(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="8" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="9" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="*" id="button" onclick="Onclick_addNum(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="5" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="6" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="-" id="button" onclick="Onclick_addNum(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="2" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="3" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="+" id="button" onclick="Onclick_addNum(this.value)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td><input type="button" value="." id="button" onclick="Onclick_addNum(this.value)"></td>
+                <td colspan="2"><input type="button" value="=" id="button" onclick="Onclick_equal()"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
